@@ -84,7 +84,7 @@ def mars_facts():
     # try/except for error handling
     try:
         # scrae into df
-        df = pd.read_html('http://space-facts.com/mars/')[0]
+        df = pd.read_html('http://space-facts.com/mars/')[1]
         
     except BaseException:
         return None
@@ -129,7 +129,3 @@ def mars_hemispheres(browser):
 if __name__ == "__main__":
     # If running as script, print scraped data
     print(scrape_all())
-
-# Quit the browser
-browser.quit()
-   
